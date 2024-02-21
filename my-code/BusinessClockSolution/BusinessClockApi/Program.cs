@@ -1,3 +1,4 @@
+using BusinessClockApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddSingleton<IProvideTheBusinessClock, StandardBusinessClock>();
+builder.Services.AddSingleton<ISystemTime, SystemTime>();
 
 //above this line is "internal" configuration stuff
 var app = builder.Build();
