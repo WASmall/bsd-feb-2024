@@ -11,12 +11,16 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "software":"Excel",
-  "description": "Blows Up!"
+  "software":"CoD",
+  "description": "The Campaign is too short!"
 }
 
 ###
 
-
 GET {{IssueTrackerApi_HostAddress}}/issues
+Accept: application/json
+
+###
+
+GET {{IssueTrackerApi_HostAddress}}/issues/defa7e30-3427-4c57-a103-c670f61d45ca
 Accept: application/json
