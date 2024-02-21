@@ -4,3 +4,19 @@ GET {{IssueTrackerApi_HostAddress}}/welcome/
 Accept: application/json
 
 ###
+
+
+POST {{IssueTrackerApi_HostAddress}}/issues
+Accept: application/json
+Content-Type: application/json
+
+{
+  "software":"Excel",
+  "description": "Blows Up!"
+}
+
+###
+
+
+GET {{IssueTrackerApi_HostAddress}}/issues
+Accept: application/json
