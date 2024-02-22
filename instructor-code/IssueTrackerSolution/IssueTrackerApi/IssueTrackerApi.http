@@ -1,0 +1,28 @@
+@IssueTrackerApi_HostAddress = http://localhost:1337
+
+GET {{IssueTrackerApi_HostAddress}}/welcome
+Accept: application/json
+
+
+###
+
+
+POST {{IssueTrackerApi_HostAddress}}/issues
+Accept: application/json
+Content-Type: application/json
+
+{
+  "software": "Resolve",
+  "description": "My videos stink!!"
+}
+
+
+###
+
+GET {{IssueTrackerApi_HostAddress}}/issues
+Accept: application/json
+
+
+###
+GET {{IssueTrackerApi_HostAddress}}/issues/bfecedb2-36d4-4516-82f7-c844044c9e91
+Accept: application/json
